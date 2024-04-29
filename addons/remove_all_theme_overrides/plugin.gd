@@ -5,6 +5,7 @@ extends EditorPlugin
 const OVERRIDE_NAMES: Dictionary = { #Dictionary[String, Array[String]]
 	'icon': ['icon'],
 	'stylebox': [
+		'panel',
 		'normal', 'focus', 'disabled', 'pressed', 'hover', 'hover_pressed', 'read_only',
 		'normal_mirrored', 'focus_mirrored', 'disabled_mirrored', 'pressed_mirrored', 'hover_mirrored', 'hover_pressed_mirrored',
 		'cursor', 'cursor_unfocused', 'selected', 'selected_focus', 'hovered'
