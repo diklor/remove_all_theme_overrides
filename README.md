@@ -2,3 +2,7 @@
 Remove all theme overrides from Control / Window
 
 ![icon](/preview.png)
+
+
+Video:
+https://youtu.be/tksJ9Aw2Bt0
