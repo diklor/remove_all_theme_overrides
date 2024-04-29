@@ -319,7 +319,7 @@ static func _back_overrride_value(changes_dict: Dictionary, is_undo: bool) -> vo
 				var value: Variant = changes_dict[object][style_name][override_name][0 if is_undo else 1]
 				if value != null:
 					#line 63
-					if (('fallback_' + style_name) in ThemeDB) and ThemeDB['fallback_' + style_name] != value:
+					if !(('fallback_' + style_name) in ThemeDB) or ((('fallback_' + style_name) in ThemeDB) and ThemeDB['fallback_' + style_name] != value):
 						object['add_theme_' + style_name + '_override'].call(StringName(override_name), value)
 						continue
 				
