@@ -234,7 +234,7 @@ func _enter_tree():
 					properties_changed_count += 1
 		
 		var editor_undoredo := get_undo_redo()
-		editor_undoredo.create_action('Change properties for ' + str(nodes_count) + ' nodes (' + str(properties_changed_count) + ' properties summary)')
+		editor_undoredo.create_action('Remove theme overrides for ' + str(nodes_count) + ' nodes (' + str(properties_changed_count) + ' properties summary)')
 		editor_undoredo.add_do_method(self, &'_back_overrride_value', changes_dict, false) #is_undo = false
 		editor_undoredo.add_undo_method(self, &'_back_overrride_value', changes_dict, true) ##is_undo = true
 		
