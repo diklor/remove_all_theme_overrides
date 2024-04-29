@@ -34,7 +34,8 @@ const CLASS_OVERRIDES: Dictionary = { #Dictionary[String, Dictionary[String, Arr
 			'caret_color',  'clear_button_color',  'clear_button_color_pressed',
 			'font_placeholder_color',  'font_selected_color',
 			'font_uneditable_color',  'selection_color',
-		]
+		],
+		'constant': ['minimum_character_width'],
 	},
 	&'BoxContainer': {
 		'color': [
