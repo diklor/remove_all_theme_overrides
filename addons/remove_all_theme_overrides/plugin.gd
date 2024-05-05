@@ -5,7 +5,6 @@ extends EditorPlugin
 const OVERRIDE_NAMES: Dictionary = { #Dictionary[String, Array[String]]
 	'icon': ['icon'],
 	'stylebox': [
-		'panel',
 		'normal', 'focus', 'disabled', 'pressed', 'hover', 'hover_pressed', 'read_only',
 		'normal_mirrored', 'focus_mirrored', 'disabled_mirrored', 'pressed_mirrored', 'hover_mirrored', 'hover_pressed_mirrored',
 		'cursor', 'cursor_unfocused', 'selected', 'selected_focus', 'hovered'
@@ -54,7 +53,13 @@ const CLASS_OVERRIDES: Dictionary = { #Dictionary[String, Dictionary[String, Arr
 		'constant': ['check_v_offset']
 	},
 	&'MarginContainer': {
-		'constant': ['margin_left',  'margin_right',  'margin_top', 'margin_bottom']
+		'constant': ['margin_left',  'margin_right',  'margin_top', 'margin_bottom'],
+	},
+	&'Panel': {
+		'stylebox': ['panel']
+	},
+	&'PanelContainer': {
+		'stylebox': ['panel']
 	},
 	&'GraphNode': {
 		'color': [
@@ -102,7 +107,7 @@ const CLASS_OVERRIDES: Dictionary = { #Dictionary[String, Dictionary[String, Arr
 		],
 		'stylebox': ['completion']
 	},
-	&'Tab': {
+	&'TabContainer': {
 		'constant': ['side_margin'],
 		'size': ['font_size'],
 		'color': [
